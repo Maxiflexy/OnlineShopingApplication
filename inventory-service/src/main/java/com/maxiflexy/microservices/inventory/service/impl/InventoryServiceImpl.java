@@ -13,6 +13,6 @@ public class InventoryServiceImpl implements InventoryService {
 
     public boolean isInStock(String skuCode, Integer quantity){
         // find inventory for a given skuCode where quantity is greater than zero
-        return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEquals(skuCode, quantity);
+        return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity);
     }
 }
